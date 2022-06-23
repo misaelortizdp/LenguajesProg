@@ -1,0 +1,12 @@
+https://developer.chrome.com/docs/devtools/console/log/
+
+
+https://developer.chrome.com/docs/devtools/console/api/
+
+https://console.spec.whatwg.org/#formatting-specifiers
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Strict_equality
+
+https://developer.mozilla.org/en-US/docs/Web/API/console
+
+https://stackoverflow.com/questions/2483429/when-should-you-use-outerhtml-in-javascript

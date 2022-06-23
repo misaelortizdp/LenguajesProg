@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()" >×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+
+    console.log('Hola')
+
+    // Interpolated
+    console.log('Hola esto es un %s string', '💩')
+
+    // Styled
+, 
+    console.log('%c este es un texto gigante', 'font-family:roboto; font-size: 35px; background:red; text-shadow: 10px 10px 0px blue ')
+
+    // warning!
+
+    console.warn('UUUUUUPPPPSSSSS')
+
+    // Error :|
+
+    console.error('ERRROOOOR!!!!')
+
+    // Info
+
+    console.info('soy semillero, apenas estoy aprendiendo ten calma con la revision de codigo')
+
+    // Testing
+
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'Esto esta mal')
+
+    // clearing
+
+    console.clear();
+
+    // Viewing DOM Elements
+
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+
+    // Grouping together
+
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`Este es ${dog.name}`);
+      console.log(`${dog.name} tiene ${dog.age} años`);
+      console.log(`${dog.name} tiene ${dog.age * 7} años caninos`);
+      console.groupEnd(`${dog.name}`);
+
+    });
+
+    console.table(dogs);
+
+    console.clear();
+
+
+
+    // counting
+
+    console.count('James')
+    console.count('Jaider')
+    console.count('Fabian')
+    console.count('Misael')
+    console.count('James')
+    console.count('David')
+    console.count('Sebastian')
+    console.count('Jaider')
+    console.count('James')
+    console.count('Sebastian')
+    console.count('David')
+    console.count('Sebastian')
+
+    console.clear();
+
+    // timing
+
+    console.time('consumir datos')
+    fetch('https://api.github.com/users/misaelortizdp')
+        .then(data => data.json())
+        .then(data => {
+          console.timeEnd('consumir datos')
+          console.log(data)
+        })
+
+  </script>
+</body>
+</html>
